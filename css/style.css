@@ -1,17 +1,92 @@
-*{
-    padding: 0;
+/* Umumiy uslublar */
+body {
     margin: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-}
-body{
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
     display: flex;
-    flex-direction: column;
-    min-height: 200vh;
-}
-.container{
-    margin: 0 auto;
-    padding-left: 5px;
-    padding-right: 5px;
-}
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+  .menu-mobile{
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  /* Mobil responsiv holat */
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .menu-mobile {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: #333;
+      width: 250px;
+      height: 100%;
+      padding-top: 20px;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+  
+    .menu-mobile ul {
+      list-style: none;
+      padding: 0;
+    }
+  
+    .menu-mobile ul li {
+      margin: 20px 0;
+      text-align: center;
+    }
+  
+    .menu-mobile ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+  
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+  }
